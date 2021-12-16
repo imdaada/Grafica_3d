@@ -147,7 +147,7 @@ class Kub {
 				let cosVN = (a*(light.vector[0])+b*(light.vector[1])+c*(light.vector[2]))
 				/(Math.sqrt(a*a + b*b+c*c)*Math.sqrt((light.vector[0]*light.vector[0])+(light.vector[1]*light.vector[1])+(light.vector[2]*light.vector[2]))); //между нормалью и лучем падения
 				let cosVRF = ((x2-x1)*(light.vector[0])+(y2-y1)*(light.vector[1])+(z2-z1)*(light.vector[2]))/(Math.sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1))*Math.sqrt((light.vector[0]*light.vector[0])+(light.vector[1]*light.vector[1])+(light.vector[2]*light.vector[2]))); ;
-				// между лучем и вектором света
+				// между лучем и вектором света 
 				//cosA = 1.3*cosA + 0.1;
 				cosVRF = 0.4*Math.pow(cosVRF, 4);
 				cosVN = 0.9*cosVN;
