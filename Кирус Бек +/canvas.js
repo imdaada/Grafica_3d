@@ -45,6 +45,16 @@ class Figure {
 			}
 		}
 	}
+	countCenter() {
+		this.center = [0, 0];
+		for(let i =0; i<this.points.length; i++)
+		{
+			this.center[0] += this.points[i][0];
+			this.center[1] += this.points[i][1];
+		}
+		this.center[0] /= this.points.length;
+		this.center[1] /= this.points.length;
+	}
 	
 }
 
@@ -187,6 +197,7 @@ function moveRight() {
 	{
 		fig3.points[i][0] = fig3.points[i][0] + 5;
 	}
+	fig3.countCenter();
 	fig3.countNorms();
 	clean();
 	render.render();
